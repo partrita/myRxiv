@@ -119,5 +119,5 @@ To bring our continuous equations into the computer, we need to discretize the e
 // 전체 너비 페이지를 사용하는 경우, 참고문헌을 직접 관리해야 합니다. 그렇지 않으면 별도 페이지에 표시됩니다
 #{
   show bibliography: set text(8pt)
-  bibliography("250818_noname.bib", title: text(12pt, "References"), style: "apa")
+  bibliography("250904_dependencyHell.bib", title: text(12pt, "References"), style: "apa")
 }
