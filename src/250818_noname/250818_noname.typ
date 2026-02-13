@@ -1,4 +1,4 @@
-#import "./templates/conf.typ": template
+#import "../templates/conf.typ": template
 
 #show: template.with(
   title: "This is private journal like article",
@@ -93,7 +93,7 @@
 #lorem(200)
 
 #figure(
-   image("files/Scikit_learn_logo.png", width: 50%),
+   image("images/Scikit_learn_logo.png", width: 50%),
    caption: [Just random logo.],
  ) <dc-setup>
 

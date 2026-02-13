@@ -27,7 +27,7 @@ find src/ -name "*.typ" -print0 | while IFS= read -r -d '' typ_file; do
     pdf_output="${TEMP_PDF_DIR}/$(basename "${typ_file%.typ}.pdf")"
 
     # Typst 컴파일 명령을 실행하고 즉시 종료 코드를 확인합니다.
-    pixi run typst compile --font-path src/fonts "${typ_file}" "${pdf_output}"
+    pixi run typst compile --root src --font-path src/fonts "${typ_file}" "${pdf_output}"
 
     # 명령의 종료 코드가 0이 아닌 경우 (오류 발생),
     # 오류 처리 함수를 호출하고 스크립트를 종료합니다.

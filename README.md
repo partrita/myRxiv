@@ -32,14 +32,24 @@ Typst 문서를 직접 빌드하여 PDF 또는 다른 형식으로 변환할 수
     (만약 pixi를 사용하지 않고 전역으로 Typst를 설치하고 싶다면, Typst 공식 설치 가이드를 참고하세요.)
 2.  설치가 완료되면, 원하는 `.typ` 파일을 Typst 컴파일러로 PDF 등 다양한 형식으로 변환할 수 있습니다.
     ```bash
-    pixi run typst compile --font-path src/fonts src/250818_noname.typ outputs/noname.pdf
+    pixi run typst compile --root src --font-path src/fonts src/250818_noname/250818_noname.typ outputs/noname.pdf
     ```
-    위 명령은 `src/noname.typ` 파일을 `outputs/noname.pdf`로 컴파일합니다. 필요에 따라 출력 파일명과 경로를 조정할 수 있습니다.
+    위 명령은 `src/250818_noname/250818_noname.typ` 파일을 `outputs/noname.pdf`로 컴파일합니다. 필요에 따라 출력 파일명과 경로를 조정할 수 있습니다.
+
+## 🆕 새로운 문서 작성
+
+Pixi를 통해 손쉽게 새로운 Typst 문서를 생성할 수 있습니다.
+
+```bash
+pixi run new
+```
+
+이 명령어를 실행하면 문서 제목과 저자 등을 묻는 대화형 프롬프트가 실행되며, `src/` 폴더 내에 날짜와 슬러그가 포함된 새 폴더가 생성되고 그 안에 `.typ` 파일과 이미지 폴더가 준비됩니다.
 
 ## 전체 Typst 문서 컴파일 오류 확인
 
 ```bash
-pixi run bash scripts/check_typst_compile.sh
+pixi run check
 ```
 
 ## 🤝 기여 방법
